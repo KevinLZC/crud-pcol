@@ -12,16 +12,21 @@ function renderItems() {
 
 let btnAddItem = document.getElementById('btnAdd')
 btnAddItem.addEventListener('click', () => {
-  let itemId = generarId(6)
+  
   let itemName = document.getElementById('itemName').value
   let itemModel = document.getElementById('itemModel').value
   let itemBrand = document.getElementById('itemBrand').value
   let itemPrice = document.getElementById('itemPrice').value
 
-  let newItem = new Item(itemId, itemName, itemModel, itemBrand, itemPrice)
-  inventory.addNewItem(newItem)
-  addItemTable(newItem)
-  cleanInputs()
+  if(itemName == "" || itemModel == "" || itemBrand == "" || itemPrice == ""){
+    window.alert("Faltan campos por llenar")
+  }else{
+    let itemId = generarId(6)
+    let newItem = new Item(itemId, itemName, itemModel, itemBrand, itemPrice)
+    inventory.addNewItem(newItem)
+    addItemTable(newItem)
+    cleanInputs()
+  }
 })
 
 let btnSaveItem = document.getElementById('btnSave')
