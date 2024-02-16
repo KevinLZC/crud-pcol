@@ -65,17 +65,17 @@ function addItemTable(item) {
 }
 
 function setInputItem(id) {
-  let itemName = document.getElementById('itemName')
-  let itemModel = document.getElementById('itemModel')
-  let itemBrand = document.getElementById('itemBrand')
-  let itemPrice = document.getElementById('itemPrice')
+  let itemName = document.getElementById('itemName');
+  let itemModel = document.getElementById('itemModel');
+  let itemBrand = document.getElementById('itemBrand');
+  let itemPrice = document.getElementById('itemPrice');
 
   items.map(item => {
     if (item.getId === id) {
-      itemName.value = item.getName
-      itemModel.value = item.getModel
-      itemBrand.value = item.getBrand
-      itemPrice.value = item.getPrice
+      itemName.value = item.getName;
+      itemModel.value = item.getModel;
+      itemBrand.value = item.getBrand;
+      itemPrice.value = item.getPrice;
     }
   })
 }
@@ -83,22 +83,24 @@ function setInputItem(id) {
 function saveItem(id) {
   items.map(item => {
     if (item.getId === id) {
-      let itemName = document.getElementById('itemName').value
-      let itemModel = document.getElementById('itemModel').value
-      let itemBrand = document.getElementById('itemBrand').value
-      let itemPrice = document.getElementById('itemPrice').value
+      let itemName = document.getElementById('itemName').value;
+      let itemModel = document.getElementById('itemModel').value;
+      let itemBrand = document.getElementById('itemBrand').value;
+      let itemPrice = document.getElementById('itemPrice').value;
 
-      item.setName = itemName
-      item.setModel = itemModel
-      item.setBrand = itemBrand
-      item.setPrice = itemPrice
+      item.setName = itemName;
+      item.setModel = itemModel;
+      item.setBrand = itemBrand;
+      item.setPrice = itemPrice;
+
+      window.alert(`Se modificó el producto con ID ${id} de forma correcta`);
     }
   })
 }
 
 function deleteItem(id) {
-  inventory.deleteItem(id)
-  let itemTable = document.getElementById(id)
-  itemTable.remove()
+  inventory.deleteItem(id);
+  let itemTable = document.getElementById(id);
+  itemTable.remove();
 }
 

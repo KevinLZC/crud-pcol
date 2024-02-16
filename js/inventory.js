@@ -15,9 +15,11 @@ class Inventory {
 
   addNewItem(item) {
     this.inventory.push(item)
+    window.alert(`Se agregó el producto con ID ${item.id} de forma correcta`);
   }
 
   deleteItem(id) {
     this.inventory = this.inventory.filter(item => item.getId !== id)
+    window.alert(`Se eliminó el producto con ID ${id} de forma correcta`);
   }
 }
