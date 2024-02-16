@@ -8,6 +8,7 @@
   <script src="/js/item.js"></script>
   <title>PCOL Hardware - CRUD Inventory</title>
   <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.cdnfonts.com/css/gg-sans-2" rel="stylesheet">
 </head>
 
 <body>
@@ -15,17 +16,21 @@
     <div class="wave"></div>
     <div class="wave"></div>
     <div class="wave"></div>
- </div>
+  </div>
   <div class="container">
     <h1>PCOL Hardware</h1>
     <div class="content">
       <div class="form-container">
         <form id="itemForm">
-          <input type="text" id="itemName" placeholder="Nombre"><br>
-          <input type="text" id="itemModel" placeholder="Modelo"><br>
-          <input type="text" id="itemBrand" placeholder="Marca"><br>
-          <input type="text" id="itemPrice" placeholder="Precio"><br>
-          <button type="button" id="btnAdd" class="btn">Agregar</button>
+          <label for="Nombre">Nombre</label>
+          <input type="text" id="itemName" placeholder="Nombre" name="Nombre"><br>
+          <label for="Modelo">Modelo</label>
+          <input type="text" id="itemModel" placeholder="Modelo" name="Modelo"><br>
+          <label for="Marca">Marca</label>
+          <input type="text" id="itemBrand" placeholder="Marca" name="Marca"><br>
+          <label for="Precio">Precio</label>
+          <input type="text" id="itemPrice" placeholder="Precio" name="Precio"><br>
+          <button type="button" id="btnAdd" class="btn" name="">Agregar</button>
           <button type="button" id="btnSave" class="btn" style="background-color: green;">Guardar</button>
         </form>
       </div>
