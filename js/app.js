@@ -31,7 +31,7 @@ btnAddItem.addEventListener('click', () => {
 
 let btnSaveItem = document.getElementById('btnSave')
 btnSaveItem.addEventListener('click', () => {
-  let itemId = items.find(item => item.getName === document.getElementById('itemName').value).getId
+  let itemId = items.find(item => item.getId === document.getElementById('itemId').value).getId
   saveItem(itemId)
   cleanInputs()
   renderItems()
@@ -70,6 +70,7 @@ function addItemTable(item) {
 }
 
 function setInputItem(id) {
+  let itemId = document.getElementById('itemId')
   let itemName = document.getElementById('itemName')
   let itemModel = document.getElementById('itemModel')
   let itemBrand = document.getElementById('itemBrand')
@@ -77,6 +78,7 @@ function setInputItem(id) {
 
   items.map(item => {
     if (item.getId === id) {
+      itemId.value = item.getId
       itemName.value = item.getName
       itemModel.value = item.getModel
       itemBrand.value = item.getBrand
